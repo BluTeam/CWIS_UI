@@ -1,0 +1,142 @@
+// Mixin
+@mixin gradient ($top: #6cc0e7, $bottom: #eee) {
+  background-image: linear-gradient(to bottom, $top 0, $bottom 100%);
+  background-repeat: repeat-x;
+}
+
+@mixin lazy_blur ($num:3px) {
+  -webkit-filter: blur($num);
+  -moz-filter:    blur($num);
+  -ms-filter:     blur($num);
+  filter:         blur($num);
+}
+
+@mixin opacity_filter ($num:50) {
+  opacity: $num / 100;
+  filter: alpha(opacity=$num);
+}
+
+// Common
+
+.strong {
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#wrap {
+  display: block;
+  min-height: 100%;
+  height: auto !important;
+  margin: -220px auto 0 auto;
+}
+
+.header {
+  height: 120px;
+  @include gradient;
+  a {
+    color: #111 !important;
+  }
+}
+
+.top-stand {
+  height: 220px;
+}
+
+.bottom-stand {
+  height: 20px;
+}
+
+.navbar-footer {
+  h6 {
+    line-height: 80px;
+    text-align: center;
+  }
+}
+
+.footer {
+  height: 100px;
+  @include gradient($top: #8fcce9);
+  border: none;
+}
+
+// User
+
+.avatar {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.user {
+  border-radius: 6px;
+  a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  border: 1px solid #CCCCCC;
+  text-align: center;
+
+  .user-avatar-container {
+    @include lazy_blur(2px);
+    border-bottom: 3px solid #0044cc;
+  }
+
+  .user-avatar {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    .user-top-stand-lg {
+      height: 45px;
+    }
+    .user-top-stand-md {
+      height: 24px;
+    }
+    .user-top-stand-sm {
+      height: 13px;
+    }
+    .user-top-stand-xs {
+      height: 20px;
+    }
+    .emblem {
+      margin-top: 3%;
+      height: 30px;
+      width: 30px;
+      background-color: #CCCCCC;
+      line-height: 30px;
+      margin-right: 10px;
+      border-radius: 4px;
+      @include opacity_filter(86);
+    }
+  }
+
+  .user-name {
+    span {
+      display: inline-block;
+      line-height: 30px;
+      padding: 7px;
+    }
+  }
+
+  .Menu-bar {
+    width: 96%;
+    margin: 0 auto 10px auto;
+    span {
+      cursor: pointer;
+    }
+    .SlideBlock {
+      display: none;
+    }
+  }
+
+}

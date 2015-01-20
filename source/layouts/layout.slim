@@ -8,13 +8,89 @@ html
     /! Responsive/Mobile Content Controls
     /! meta name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0'
 
-    title #{data.project.title} | #{current_page.data.title}
+    title CWIS
     link rel="shortcut icon" href="#{image_path('favicon.ico')}" type="image/x-icon"
 
     == stylesheet_link_tag 'project'
 
   body class='#{page_classes}'
-
-    == yield
-
+    nav.navbar.navbar-default.header role="navigation"
+      .container
+        .row
+          .navbar-header
+            a.navbar-brand href="#"
+              h2.strong
+                | 一起学习网
+    #wrap
+      .top-stand
+      .container
+        .row
+          .col-sm-4
+            .user.row
+              .user-avatar-container
+                == image_tag "example.jpg", style: "width: 100%"
+              .user-avatar
+                .user-top-stand-lg.visible-lg
+                .user-top-stand-md.visible-md
+                .user-top-stand-sm.visible-sm
+                .user-top-stand-xs.visible-xs
+                == image_tag "example.jpg", class: "avatar"
+                .emblemBox.hidden-sm.hidden-xs
+                  .emblem.pull-right.strong
+                    | 屌
+                  .emblem.pull-right.strong
+                    | 屌
+              .user-name
+                span.name.strong
+                  | 王海宁
+                span.number
+                  | 123456789
+              .list-group.Menu-bar
+                span.list-group-item.list-group-item-info.SlideBar.strong data-flag="#classManagement"
+                  | 班级
+                #classManagement.SlideBlock
+                  a.list-group-item
+                    | 班级管理
+                  a.list-group-item
+                    | 学生管理
+                  a.list-group-item
+                    | 班级动态
+                span.list-group-item.list-group-item-info.SlideBar.strong data-flag="#homeworkManagement"
+                  | 作业
+                #homeworkManagement.SlideBlock
+                  a.list-group-item
+                    | 班级管理
+                  a.list-group-item
+                    | 学生管理
+                  a.list-group-item
+                    | 班级动态
+                span.list-group-item.list-group-item-info.SlideBar.strong data-flag="#testManagement"
+                  | 测验
+                #testManagement.SlideBlock
+                  a.list-group-item
+                    | 测试管理
+                  a.list-group-item
+                    | 创建测验
+                  a.list-group-item
+                    | 测验列表
+                span.list-group-item.list-group-item-info.SlideBar.strong data-flag="#resultManagement"
+                  | 成绩
+                #resultManagement.SlideBlock
+                  a.list-group-item
+                    | 成绩管理
+                  a.list-group-item
+                    | 录入成绩
+                  a.list-group-item
+                    | 成绩列表
+              a.btn-lg.btn-info href="http://tieba.baidu.com"
+                | 教师论坛
+          .col-sm-8
+            == yield
+      .bottom-stand
+    nav.navbar.navbar-default.footer role="navigation"
+      .container
+        .row
+          .navbar-footer
+            h6
+              | Copyright@2014 南昌蜗牛科技有限公司   联系我们  电话：0791-86868666
     == javascript_include_tag 'project'    
