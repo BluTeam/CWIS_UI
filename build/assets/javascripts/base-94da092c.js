@@ -1,0 +1,1 @@
+!function(){$(document).ready(function(){return $(".SlideBar").on("click",function(){var t;return t=$(this).attr("data-flag"),"block"===$(t).css("display")?($(t).slideUp("fast"),$(this).removeClass("active")):($(this).addClass("active"),$(t).slideDown("fast"))})})}.call(this);
