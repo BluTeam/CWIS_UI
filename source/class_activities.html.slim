@@ -1,0 +1,63 @@
+.panel.panel-info
+  .panel-heading
+    .row.extra-padding
+      h4.strong.pull-left
+        | 班级动态
+      a.btn.btn-info.pull-right.strong12
+        | 发布动态
+  .panel-body.panel-search
+    form.form-inline role="form"
+      .form-group.inline-form-extra-margin
+        label.sr-only-focusable for="className" 班级：
+        select.form-control#className
+          option 一年级
+          option 二年级
+      .form-group.inline-form-extra-margin
+        label.sr-only-focusable for="studentName" 学生姓名：
+        input.form-control#studentName placeholder="学生姓名"
+      .form-group.inline-form-extra-margin
+        label.sr-only-focusable for="parentName" 家长姓名：
+        input.form-control#studentName placeholder="家长姓名"
+      .form-group.inline-form-extra-margin
+        label.sr-only-focusable for="studentNum" 学生学号：
+        input.form-control#studentNum onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" placeholder="班级人数"
+      .form-group.inline-form-extra-margin
+        label.sr-only-focusable for="gender" 性别：
+        select.form-control#gender
+          option 男
+          option 女
+      button.btn.btn-info.strong12 type="submit" 提 交
+  .table-responsive
+    table.table.table-bordered
+      thead
+        tr.info
+          th.strong 姓名
+          th.strong 序号
+          th.strong 学号
+          th.strong 家长
+          th.strong 家长手机
+          th.strong 微信
+          th.strong 操作
+      tbody
+        tr
+          td
+            a 张三
+          td 1
+          td 123345234
+          td 卡卡卡
+          td 12345678901
+          td KIS大幅
+          td
+            a 编辑
+            a 删除
+        tr
+          td
+            a 张三
+          td 1
+          td 123345234
+          td 卡卡卡
+          td 12345678901
+          td KIS大幅
+          td
+            a 编辑
+            a 删除

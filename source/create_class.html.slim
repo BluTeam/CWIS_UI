@@ -1,0 +1,37 @@
+.panel.panel-info
+  .panel-heading
+    .row.extra-padding
+      h4.strong.pull-left
+        | 创建班级
+      a.btn.btn-info.pull-right.strong12 href="/class_management"
+        | 返回
+  form role="form"
+    .panel-body
+      .row
+        .col-sm-2
+        .col-sm-8
+
+            .form-group
+              label for="grade" 年 级
+              span.nil *
+              select#grade.form-control required="required"
+                option 一年级
+                option 二年级
+                option 三年级
+            .form-group
+              label for="class" 班 级
+              span.nil *
+              input#class.form-control required="required" autocomplete="off" placeholder="班级名称"
+            .form-group
+              label for="count" 班级人数
+              span.nil *
+              input#count.form-control required="required" autocomplete="off" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" placeholder="班级人数"
+            .form-group
+              label for="alias" 班级别名
+              input#alias.form-control placeholder="班级别名"
+            .form-group
+              label for="school_num" 学校编码
+              input#school_num.form-control disabled="disabled" value="fffffff"
+        .col-sm-2
+    .panel-footer
+      button.btn.btn-info.strong.center type="submit" 提 交
