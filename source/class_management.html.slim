@@ -1,0 +1,84 @@
+.panel.panel-info
+  .panel-heading
+    .row.extra-padding
+      h4.strong.pull-left
+        | 班级管理
+      a.btn.btn-info.pull-right.strong12 href="/relate_class"
+        | 关 联
+      a.btn.btn-info.pull-right.strong12 href="/create_class"
+        | 创 建
+  /.panel-body
+  ul.list-group
+    li.list-group-item
+      .panel.panel-default style="margin-bottom: 0;"
+        .panel-heading
+          .row.extra-padding
+            h5.strong.pull-left
+              | 三年级2班
+            a.btn.btn-info.pull-right.strong12 href="/edit_class_information" 编 辑
+        .panel-body
+          .row
+            .col-sm-4
+              .class-detail
+                p.strong
+                  span
+                    | 学生人数：
+                  span 20
+                a.btn.btn-primary
+                  | 学生详情
+            .col-sm-8
+              .teachers
+                .row
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+    li.list-group-item
+      .panel.panel-default
+        .panel-heading
+          .row.extra-padding
+            h5.strong.pull-left
+              | 三年级2班
+            a.btn.btn-info.pull-right.strong12 href="/edit_class_information" 编 辑
+        .panel-body
+          .row
+            .col-sm-4
+              .class-detail
+                p.strong
+                  span
+                    | 学生人数：
+                  span 20
+                a.btn.btn-primary
+                  | 学生详情
+            .col-sm-8
+              .teachers
+                .row
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+                  .thumbnail.teacher.pull-left
+                    == image_tag "example.jpg", data: {src: "holder.js"}
+                    p.strong12
+                      | 王老师
+  /.panel-footer

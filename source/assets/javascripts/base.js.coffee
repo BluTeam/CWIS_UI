@@ -5,6 +5,7 @@ $(document).ready ->
       $(flag).slideUp('fast')
       $(this).removeClass('active')
     else
+#   关闭其他下拉框
 #      $('.SlideBlock').slideUp()
 #      $('.SlideBar').removeClass('active')
       $(this).addClass('active')

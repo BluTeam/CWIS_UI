@@ -18,7 +18,16 @@
 
 // Common
 
+a {
+  cursor: pointer;
+}
+
 .strong {
+  font-weight: bold;
+}
+
+.strong12 {
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -139,4 +148,41 @@ body {
     }
   }
 
+}
+
+.extra-padding {
+  padding-right: 15px;
+  padding-left: 15px;
+  a {
+    margin-top: 4px;
+    margin-left: 15px;
+    font-size: 12px;
+  }
+}
+
+.inline-form-extra-margin {
+  margin-right: 15px;
+  margin-bottom: 8px !important;
+}
+
+.nil {
+  color: red;
+  font-size: 13px;
+}
+
+.center {
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel-search {
+  button {
+    margin-bottom: 8px;
+  }
+}
+
+.Menu-bar {
+  h4 { margin: 3px }
 }
